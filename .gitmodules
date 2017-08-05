@@ -1,0 +1,6 @@
+[submodule "network"]
+	path = network
+	url = ssh://github/strohzwei/network.git
+[submodule "buffer"]
+	path = buffer
+	url = ssh://github/strohzwei/buffer.git
