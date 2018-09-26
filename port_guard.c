@@ -138,7 +138,7 @@ int main(int argc, char **argv, char **envp) {
 			printf("-s\t server port\t\t\t(external default=%d)\n",
 					server_conf->port);
 			printf("-S\t server ip\t\t\t(default=ANY)\n");
-			printf("-d\t client port\t\t(internal default=%d)\n",
+			printf("-d\t client port\t\t\t(internal default=%d)\n",
 					client_conf->port);
 			printf("-D\t client ip\t\t\t(default=127.0.0.1)\n");
 			printf("-l\t buffer lines\t\t\t(default=%d)\n",
