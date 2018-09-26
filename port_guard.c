@@ -215,6 +215,7 @@ void *worker(void *param){
 	 pthread_setname_np(args->self, "worker");
 	 int mask_offset = 0;
 	 if (args->mask_mode != 0) mask_offset = strlen(args->mask);
+	printf("ddddddddddd %d",args->pop->size);
 	 void* data = calloc(args->pop->size+mask_offset, sizeof(char));
 	 void* tmp = calloc(args->pop->size+mask_offset, sizeof(char));
 	 int readed;
