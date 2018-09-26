@@ -1,6 +1,0 @@
-[submodule "network"]
-	path = network
-	url = https://github.com/strohzwei/network.git
-[submodule "buffer"]
-	path = buffer
-	url = https://github.com/strohzwei/buffer.git
