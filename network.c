@@ -434,32 +434,32 @@ network_pt network_init_mode(char *ip, int port, int mode){
 network_pt network_init(network_conf_pt conf){
 
 
-		network_pt network = malloc(sizeof(*network));
-		buffer_pt buffer_in = malloc(sizeof(buffer));
-		buffer_pt buffer_out = malloc(sizeof(buffer));
-		thread_param_pt param = malloc(sizeof(*param));
-		network->conf = conf;
-		network->conf->thread = (void*) param;
+	network_pt network = malloc(sizeof(*network));
+	buffer_pt buffer_in = malloc(sizeof(buffer));
+	buffer_pt buffer_out = malloc(sizeof(buffer));
+	thread_param_pt param = malloc(sizeof(*param));
+	network->conf = conf;
+	network->conf->thread = (void*) param;
 
-		param->en = 1;
-		param->debug = conf->verbose;
+	param->en = 1;
+	param->debug = conf->verbose;
 
-	    strcpy(param->ip,conf->ip_address);
-	    param->socket = conf->port;
+	strcpy(param->ip,conf->ip_address);
+	param->socket = conf->port;
 
-	    buffer_in->size =conf->buffer_length;
-	    buffer_out->size =conf->buffer_length;
+	buffer_in->size =conf->buffer_length;
+	buffer_out->size =conf->buffer_length;
 
-	    buffer_in->lines =conf->buffer_lines;
-	    buffer_out->lines =conf->buffer_lines;
+	buffer_in->lines =conf->buffer_lines;
+	buffer_out->lines =conf->buffer_lines;
 
-	    param->buffer = buffer_in;
-	    param->buffer_out = buffer_out;
-	    param->buffer_access_mode = conf->buffer_access_mode;
+	param->buffer = buffer_in;
+	param->buffer_out = buffer_out;
+	param->buffer_access_mode = conf->buffer_access_mode;
 
-	    param->send_delay = conf->transmit_delay;
-	    param->reconnect_delay = conf->reconnect_delay;
-	    param->tcp_timeout = conf->timeout;
+	param->send_delay = conf->transmit_delay;
+	param->reconnect_delay = conf->reconnect_delay;
+	param->tcp_timeout = conf->timeout;
 
 buffer_init(buffer_in);
 	    buffer_init(buffer_out);
