@@ -15,5 +15,5 @@ jobs:
     - uses: actions/checkout@v2
     - name: make
       run: make
-    - name: files
-      run: ls -la
+    - name: testing
+      run: port_guard -h
