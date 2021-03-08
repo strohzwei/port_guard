@@ -17,5 +17,5 @@ jobs:
       run: make
     - name: testing
       run: ./port_guard -h
-    - name: testing_v2
-      run: ./port_guard -h
+    - name: run
+      run: ./port_guard
